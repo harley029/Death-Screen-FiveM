@@ -1,0 +1,163 @@
+Config = {}
+Config.WipeInventoryOnRespawn = true                         -- Enable or disable removing all the players items when they respawn at the hospital
+Config.DeathTime = 60                                       -- How long the timer is for players to bleed out completely and respawn at the hospital
+Config.ReviveInterval = 60                                  -- How long the timer is for players to revive a player in laststand
+Config.MinimumRevive = 30                                    -- How long the timer is for players to revive a player in laststand
+Config.EmsRevive = 300                                       -- Additional Time after emergency call
+Config.AIHealTimer = 20                                      -- How long it will take to be healed after checking in, in seconds
+Config.FadeOutTimer = 2                                      -- How many bleed ticks occur before fadeout happens
+Config.BlackoutTimer = 10                                    -- How many bleed ticks occur before blacking out
+Config.AdvanceBleedTimer = 10                                -- How many bleed ticks occur before bleed level increases
+Config.ArmInjuryTimer = 30                                   -- How much time, in seconds, do arm injury effects chance occur
+
+Config.Locations = {                -- Edit the various interaction points for players or create new ones
+   
+    ['beds'] = {
+        { coords = vector4(353.1, -584.6, 43.11, 152.08),    taken = false, model = 1631638868 },
+        { coords = vector4(356.79, -585.86, 43.11, 152.08),  taken = false, model = 1631638868 },
+        { coords = vector4(354.12, -593.12, 43.1, 336.32),   taken = false, model = 2117668672 },
+        { coords = vector4(350.79, -591.8, 43.1, 336.32),    taken = false, model = 2117668672 },
+        { coords = vector4(346.99, -590.48, 43.1, 336.32),   taken = false, model = 2117668672 },
+        { coords = vector4(360.32, -587.19, 43.02, 152.08),  taken = false, model = -1091386327 },
+        { coords = vector4(349.82, -583.33, 43.02, 152.08),  taken = false, model = -1091386327 },
+        { coords = vector4(326.98, -576.17, 43.02, 152.08),  taken = false, model = -1091386327 },
+        --- paleto
+        { coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672 },
+        { coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672 },
+        { coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672 },
+    },
+  
+    ['hospital'] = {
+        {
+            ['name'] = Lang:t('info.pb_hospital'),
+            ['location'] = vector3(308.36, -595.25, 43.28),
+            ['beds'] = {
+                { coords = vector4(353.1, -584.6, 43.11, 152.08),   taken = false, model = 1631638868 },
+                { coords = vector4(356.79, -585.86, 43.11, 152.08), taken = false, model = 1631638868 },
+                { coords = vector4(354.12, -593.12, 43.1, 336.32),  taken = false, model = 2117668672 },
+                { coords = vector4(350.79, -591.8, 43.1, 336.32),   taken = false, model = 2117668672 },
+                { coords = vector4(346.99, -590.48, 43.1, 336.32),  taken = false, model = 2117668672 },
+                { coords = vector4(360.32, -587.19, 43.02, 152.08), taken = false, model = -1091386327 },
+                { coords = vector4(349.82, -583.33, 43.02, 152.08), taken = false, model = -1091386327 },
+                { coords = vector4(326.98, -576.17, 43.02, 152.08), taken = false, model = -1091386327 },
+            },
+        },
+        {
+            ['name'] = Lang:t('info.paleto_hospital'),
+            ['location'] = vector3(-254.54, 6331.78, 32.43),
+            ['beds'] = {
+                { coords = vector4(-252.43, 6312.25, 32.34, 313.48), taken = false, model = 2117668672 },
+                { coords = vector4(-247.04, 6317.95, 32.34, 134.64), taken = false, model = 2117668672 },
+                { coords = vector4(-255.98, 6315.67, 32.34, 313.91), taken = false, model = 2117668672 },
+            },
+        },
+    },
+    ['stations'] = {
+        { label = Lang:t('info.pb_hospital'), coords = vector3(304.27, -600.33, 43.28) }
+    }
+}
+
+
+Config.Weapons = {
+    'WEAPON_KNIFE',
+    'WEAPON_NIGHTSTICK',
+    'WEAPON_BREAD',
+    'WEAPON_FLASHLIGHT',
+    'WEAPON_HAMMER',
+    'WEAPON_BAT',
+    'WEAPON_GOLFCLUB',
+    'WEAPON_CROWBAR',
+    'WEAPON_BOTTLE',
+    'WEAPON_DAGGER',
+    'WEAPON_HATCHET',
+    'WEAPON_MACHETE',
+    'WEAPON_SWITCHBLADE',
+    'WEAPON_BATTLEAXE',
+    'WEAPON_POOLCUE',
+    'WEAPON_WRENCH',
+    'WEAPON_PISTOL',
+    'WEAPON_PISTOL_MK2',
+    'WEAPON_COMBATPISTOL',
+    'WEAPON_APPISTOL',
+    'WEAPON_PISTOL50',
+    'WEAPON_REVOLVER',
+    'WEAPON_SNSPISTOL',
+    'WEAPON_HEAVYPISTOL',
+    'WEAPON_VINTAGEPISTOL',
+    'WEAPON_MICROSMG',
+    'WEAPON_SMG',
+    'WEAPON_ASSAULTSMG',
+    'WEAPON_MINISMG',
+    'WEAPON_MACHINEPISTOL',
+    'WEAPON_COMBATPDW',
+    'WEAPON_PUMPSHOTGUN',
+    'WEAPON_SAWNOFFSHOTGUN',
+    'WEAPON_ASSAULTSHOTGUN',
+    'WEAPON_BULLPUPSHOTGUN',
+    'WEAPON_HEAVYSHOTGUN',
+    'WEAPON_ASSAULTRIFLE',
+    'WEAPON_CARBINERIFLE',
+    'WEAPON_ADVANCEDRIFLE',
+    'WEAPON_SPECIALCARBINE',
+    'WEAPON_BULLPUPRIFLE',
+    'WEAPON_COMPACTRIFLE',
+    'WEAPON_MG',
+    'WEAPON_COMBATMG',
+    'WEAPON_GUSENBERG',
+    'WEAPON_SNIPERRIFLE',
+    'WEAPON_HEAVYSNIPER',
+    'WEAPON_MARKSMANRIFLE',
+    'WEAPON_GRENADELAUNCHER',
+    'WEAPON_RPG',
+    'WEAPON_STINGER',
+    'WEAPON_MINIGUN',
+    'WEAPON_GRENADE',
+    'WEAPON_STICKYBOMB',
+    'WEAPON_SMOKEGRENADE',
+    'WEAPON_BZGAS',
+    'WEAPON_MOLOTOV',
+    'WEAPON_DIGISCANNER',
+    'WEAPON_FIREWORK',
+    'WEAPON_MUSKET',
+    'WEAPON_STUNGUN',
+    'WEAPON_HOMINGLAUNCHER',
+    'WEAPON_PROXMINE',
+    'WEAPON_FLAREGUN',
+    'WEAPON_MARKSMANPISTOL',
+    'WEAPON_RAILGUN',
+    'WEAPON_DBSHOTGUN',
+    'WEAPON_AUTOSHOTGUN',
+    'WEAPON_COMPACTLAUNCHER',
+    'WEAPON_PIPEBOMB',
+    'WEAPON_DOUBLEACTION',
+    'WEAPON_SNOWBALL',
+    'WEAPON_PISTOLXM3',
+    'WEAPON_CANDYCANE',
+    'WEAPON_CERAMICPISTOL',
+    'WEAPON_NAVYREVOLVER',
+    'WEAPON_GADGETPISTOL',
+    'WEAPON_PISTOLXM3',
+    'WEAPON_TECPISTOL',
+    'WEAPON_HEAVYRIFLE',
+    'WEAPON_MILITARYRIFLE',
+    'WEAPON_TACTICALRIFLE',
+    'WEAPON_SWEEPERSHOTGUN',
+    'WEAPON_ASSAULTRIFLE_MK2',
+    'WEAPON_BULLPUPRIFLE_MK2',
+    'WEAPON_CARBINERIFLE_MK2',
+    'WEAPON_COMBATMG_MK2',
+    'WEAPON_HEAVYSNIPER_MK2',
+    'WEAPON_KNUCKLE',
+    'WEAPON_MARKSMANRIFLE_MK2',
+    'WEAPON_PRECISIONRIFLE',
+    'WEAPON_PETROLCAN',
+    'WEAPON_PUMPSHOTGUN_MK2',
+    'WEAPON_RAYCARBINE',
+    'WEAPON_RAYMINIGUN',
+    'WEAPON_RAYPISTOL',
+    'WEAPON_REVOLVER_MK2',
+    'WEAPON_SMG_MK2',
+    'WEAPON_SNSPISTOL_MK2',
+    'WEAPON_SPECIALCARBINE_MK2',
+    'WEAPON_STONE_HATCHET'
+} 
